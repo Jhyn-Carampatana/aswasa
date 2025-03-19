@@ -1,0 +1,36 @@
+using System;
+
+public class StudentGrade
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the student's grade (e.g., 3.5, 2.8):");
+        string input = Console.ReadLine();
+
+        if (double.TryParse(input, out double grade))
+        {
+            string performance;
+            switch (grade <= 3.0)
+            {
+                case true:
+                    performance = "Passing Grades";
+                    break;
+                case false:
+                    performance = "Failing Grades";
+                    break;
+                default:
+                    performance = "Invalid Grade";
+                    break;
+            }
+
+            Console.WriteLine($"The student's performance is: {performance}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid numerical grade.");
+        }
+
+        Console.ReadKey();
+    }
+}
+
