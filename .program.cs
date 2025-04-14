@@ -2,7 +2,7 @@ using System;
 using System.Windows.Forms;
 using SemiFinalActivity2;
 
-namespace YourFamilyname_Activity2
+namespace SemiFinalActivity2
 {
     static class Program
     {
