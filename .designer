@@ -28,310 +28,614 @@ namespace SemiFinalActivity2
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblIDNumber = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lblMiddleName = new System.Windows.Forms.Label();
-            this.lblCourse = new System.Windows.Forms.Label();
-            this.lblYearLevel = new System.Windows.Forms.Label();
-            this.lblBirthday = new System.Windows.Forms.Label();
-            this.txtIDNumber = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtMiddleName = new System.Windows.Forms.TextBox();
-            this.txtCourse = new System.Windows.Forms.TextBox();
-            this.txtYearLevel = new System.Windows.Forms.TextBox();
-            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            panelHeader = new Panel();
+            lblTitle = new Label();
+            panelLeft = new Panel();
+            groupBoxStudentInfo = new GroupBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panelIDNumber = new Panel();
+            txtIDNumber = new TextBox();
+            lblIDNumber = new Label();
+            panelName = new Panel();
+            txtMiddleName = new TextBox();
+            lblMiddleName = new Label();
+            txtLastName = new TextBox();
+            lblLastName = new Label();
+            txtFirstName = new TextBox();
+            lblFirstName = new Label();
+            panelAcademic = new Panel();
+            cbYearLevel = new ComboBox();
+            lblYearLevel = new Label();
+            txtCourse = new TextBox();
+            lblCourse = new Label();
+            panelBirthday = new Panel();
+            dtpBirthday = new DateTimePicker();
+            lblBirthday = new Label();
+            panelButtons = new Panel();
+            btnDelete = new Button();
+            btnUpdate = new Button();
+            btnClear = new Button();
+            btnSave = new Button();
+            panelRight = new Panel();
+            panelSearch = new Panel();
+            btnClearSearch = new Button();
+            lblSearch = new Label();
+            txtSearch = new TextBox();
+            btnSearch = new Button();
+            dgvStudents = new DataGridView();
+            statusStrip = new StatusStrip();
+            statusLabel = new ToolStripStatusLabel();
+            toolTip = new ToolTip(components);
+            panelHeader.SuspendLayout();
+            panelLeft.SuspendLayout();
+            groupBoxStudentInfo.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            panelIDNumber.SuspendLayout();
+            panelName.SuspendLayout();
+            panelAcademic.SuspendLayout();
+            panelBirthday.SuspendLayout();
+            panelButtons.SuspendLayout();
+            panelRight.SuspendLayout();
+            panelSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvStudents).BeginInit();
+            statusStrip.SuspendLayout();
+            SuspendLayout();
+            // 
+            // panelHeader
+            // 
+            panelHeader.BackColor = Color.FromArgb(41, 128, 185);
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(0, 0);
+            panelHeader.Margin = new Padding(4, 3, 4, 3);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1195, 69);
+            panelHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(102, 39);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(245, 24);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Student Information Form";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(14, 15);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(287, 32);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Student Records System";
             // 
-            // lblIDNumber
+            // panelLeft
             // 
-            this.lblIDNumber.AutoSize = true;
-            this.lblIDNumber.Location = new System.Drawing.Point(12, 85);
-            this.lblIDNumber.Name = "lblIDNumber";
-            this.lblIDNumber.Size = new System.Drawing.Size(61, 13);
-            this.lblIDNumber.TabIndex = 1;
-            this.lblIDNumber.Text = "ID Number:";
+            panelLeft.BackColor = Color.FromArgb(236, 240, 241);
+            panelLeft.Controls.Add(groupBoxStudentInfo);
+            panelLeft.Controls.Add(panelButtons);
+            panelLeft.Dock = DockStyle.Left;
+            panelLeft.Location = new Point(0, 69);
+            panelLeft.Margin = new Padding(4, 3, 4, 3);
+            panelLeft.Name = "panelLeft";
+            panelLeft.Padding = new Padding(12, 12, 12, 12);
+            panelLeft.Size = new Size(467, 680);
+            panelLeft.TabIndex = 1;
             // 
-            // lblFirstName
+            // groupBoxStudentInfo
             // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(12, 115);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(60, 13);
-            this.lblFirstName.TabIndex = 2;
-            this.lblFirstName.Text = "First Name:";
+            groupBoxStudentInfo.Controls.Add(flowLayoutPanel1);
+            groupBoxStudentInfo.Dock = DockStyle.Fill;
+            groupBoxStudentInfo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBoxStudentInfo.Location = new Point(12, 12);
+            groupBoxStudentInfo.Margin = new Padding(4, 3, 4, 3);
+            groupBoxStudentInfo.Name = "groupBoxStudentInfo";
+            groupBoxStudentInfo.Padding = new Padding(4, 3, 4, 3);
+            groupBoxStudentInfo.Size = new Size(443, 587);
+            groupBoxStudentInfo.TabIndex = 0;
+            groupBoxStudentInfo.TabStop = false;
+            groupBoxStudentInfo.Text = "Student Information";
             // 
-            // lblLastName
+            // flowLayoutPanel1
             // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(12, 145);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(61, 13);
-            this.lblLastName.TabIndex = 3;
-            this.lblLastName.Text = "Last Name:";
+            flowLayoutPanel1.Controls.Add(panelIDNumber);
+            flowLayoutPanel1.Controls.Add(panelName);
+            flowLayoutPanel1.Controls.Add(panelAcademic);
+            flowLayoutPanel1.Controls.Add(panelBirthday);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(4, 21);
+            flowLayoutPanel1.Margin = new Padding(4, 3, 4, 3);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Padding = new Padding(12, 12, 12, 12);
+            flowLayoutPanel1.Size = new Size(435, 563);
+            flowLayoutPanel1.TabIndex = 0;
             // 
-            // lblMiddleName
+            // panelIDNumber
             // 
-            this.lblMiddleName.AutoSize = true;
-            this.lblMiddleName.Location = new System.Drawing.Point(12, 175);
-            this.lblMiddleName.Name = "lblMiddleName";
-            this.lblMiddleName.Size = new System.Drawing.Size(72, 13);
-            this.lblMiddleName.TabIndex = 4;
-            this.lblMiddleName.Text = "Middle Name:";
-            // 
-            // lblCourse
-            // 
-            this.lblCourse.AutoSize = true;
-            this.lblCourse.Location = new System.Drawing.Point(12, 205);
-            this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(43, 13);
-            this.lblCourse.TabIndex = 5;
-            this.lblCourse.Text = "Course:";
-            // 
-            // lblYearLevel
-            // 
-            this.lblYearLevel.AutoSize = true;
-            this.lblYearLevel.Location = new System.Drawing.Point(12, 235);
-            this.lblYearLevel.Name = "lblYearLevel";
-            this.lblYearLevel.Size = new System.Drawing.Size(61, 13);
-            this.lblYearLevel.TabIndex = 6;
-            this.lblYearLevel.Text = "Year Level:";
-            // 
-            // lblBirthday
-            // 
-            this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Location = new System.Drawing.Point(12, 265);
-            this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(48, 13);
-            this.lblBirthday.TabIndex = 7;
-            this.lblBirthday.Text = "Birthday:";
+            panelIDNumber.Controls.Add(txtIDNumber);
+            panelIDNumber.Controls.Add(lblIDNumber);
+            panelIDNumber.Location = new Point(16, 15);
+            panelIDNumber.Margin = new Padding(4, 3, 4, 3);
+            panelIDNumber.Name = "panelIDNumber";
+            panelIDNumber.Size = new Size(408, 81);
+            panelIDNumber.TabIndex = 0;
             // 
             // txtIDNumber
             // 
-            this.txtIDNumber.Location = new System.Drawing.Point(97, 82);
-            this.txtIDNumber.Name = "txtIDNumber";
-            this.txtIDNumber.Size = new System.Drawing.Size(250, 20);
-            this.txtIDNumber.TabIndex = 0;
-            this.txtIDNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDNumber_KeyPress);
+            txtIDNumber.BorderStyle = BorderStyle.FixedSingle;
+            txtIDNumber.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtIDNumber.Location = new Point(8, 35);
+            txtIDNumber.Margin = new Padding(4, 3, 4, 3);
+            txtIDNumber.Name = "txtIDNumber";
+            txtIDNumber.Size = new Size(385, 27);
+            txtIDNumber.TabIndex = 0;
+            toolTip.SetToolTip(txtIDNumber, "Enter student ID number (numbers only)");
+            txtIDNumber.KeyPress += txtIDNumber_KeyPress;
             // 
-            // txtFirstName
+            // lblIDNumber
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(97, 112);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(250, 20);
-            this.txtFirstName.TabIndex = 1;
+            lblIDNumber.AutoSize = true;
+            lblIDNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIDNumber.Location = new Point(4, 12);
+            lblIDNumber.Margin = new Padding(4, 0, 4, 0);
+            lblIDNumber.Name = "lblIDNumber";
+            lblIDNumber.Size = new Size(75, 17);
+            lblIDNumber.TabIndex = 0;
+            lblIDNumber.Text = "ID Number:";
             // 
-            // txtLastName
+            // panelName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(97, 142);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(250, 20);
-            this.txtLastName.TabIndex = 2;
+            panelName.Controls.Add(txtMiddleName);
+            panelName.Controls.Add(lblMiddleName);
+            panelName.Controls.Add(txtLastName);
+            panelName.Controls.Add(lblLastName);
+            panelName.Controls.Add(txtFirstName);
+            panelName.Controls.Add(lblFirstName);
+            panelName.Location = new Point(16, 102);
+            panelName.Margin = new Padding(4, 3, 4, 3);
+            panelName.Name = "panelName";
+            panelName.Size = new Size(408, 202);
+            panelName.TabIndex = 1;
             // 
             // txtMiddleName
             // 
-            this.txtMiddleName.Location = new System.Drawing.Point(97, 172);
-            this.txtMiddleName.Name = "txtMiddleName";
-            this.txtMiddleName.Size = new System.Drawing.Size(250, 20);
-            this.txtMiddleName.TabIndex = 3;
+            txtMiddleName.BorderStyle = BorderStyle.FixedSingle;
+            txtMiddleName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtMiddleName.Location = new Point(8, 162);
+            txtMiddleName.Margin = new Padding(4, 3, 4, 3);
+            txtMiddleName.Name = "txtMiddleName";
+            txtMiddleName.Size = new Size(385, 27);
+            txtMiddleName.TabIndex = 2;
+            toolTip.SetToolTip(txtMiddleName, "Enter student's middle name (optional)");
+            // 
+            // lblMiddleName
+            // 
+            lblMiddleName.AutoSize = true;
+            lblMiddleName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMiddleName.Location = new Point(4, 138);
+            lblMiddleName.Margin = new Padding(4, 0, 4, 0);
+            lblMiddleName.Name = "lblMiddleName";
+            lblMiddleName.Size = new Size(91, 17);
+            lblMiddleName.TabIndex = 4;
+            lblMiddleName.Text = "Middle Name:";
+            // 
+            // txtLastName
+            // 
+            txtLastName.BorderStyle = BorderStyle.FixedSingle;
+            txtLastName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtLastName.Location = new Point(8, 98);
+            txtLastName.Margin = new Padding(4, 3, 4, 3);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(385, 27);
+            txtLastName.TabIndex = 1;
+            toolTip.SetToolTip(txtLastName, "Enter student's last name");
+            // 
+            // lblLastName
+            // 
+            lblLastName.AutoSize = true;
+            lblLastName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLastName.Location = new Point(4, 75);
+            lblLastName.Margin = new Padding(4, 0, 4, 0);
+            lblLastName.Name = "lblLastName";
+            lblLastName.Size = new Size(73, 17);
+            lblLastName.TabIndex = 2;
+            lblLastName.Text = "Last Name:";
+            // 
+            // txtFirstName
+            // 
+            txtFirstName.BorderStyle = BorderStyle.FixedSingle;
+            txtFirstName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFirstName.Location = new Point(8, 35);
+            txtFirstName.Margin = new Padding(4, 3, 4, 3);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(385, 27);
+            txtFirstName.TabIndex = 0;
+            toolTip.SetToolTip(txtFirstName, "Enter student's first name");
+            // 
+            // lblFirstName
+            // 
+            lblFirstName.AutoSize = true;
+            lblFirstName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFirstName.Location = new Point(4, 12);
+            lblFirstName.Margin = new Padding(4, 0, 4, 0);
+            lblFirstName.Name = "lblFirstName";
+            lblFirstName.Size = new Size(74, 17);
+            lblFirstName.TabIndex = 0;
+            lblFirstName.Text = "First Name:";
+            // 
+            // panelAcademic
+            // 
+            panelAcademic.Controls.Add(cbYearLevel);
+            panelAcademic.Controls.Add(lblYearLevel);
+            panelAcademic.Controls.Add(txtCourse);
+            panelAcademic.Controls.Add(lblCourse);
+            panelAcademic.Location = new Point(16, 310);
+            panelAcademic.Margin = new Padding(4, 3, 4, 3);
+            panelAcademic.Name = "panelAcademic";
+            panelAcademic.Size = new Size(408, 138);
+            panelAcademic.TabIndex = 2;
+            // 
+            // cbYearLevel
+            // 
+            cbYearLevel.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbYearLevel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbYearLevel.FormattingEnabled = true;
+            cbYearLevel.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            cbYearLevel.Location = new Point(8, 98);
+            cbYearLevel.Margin = new Padding(4, 3, 4, 3);
+            cbYearLevel.Name = "cbYearLevel";
+            cbYearLevel.Size = new Size(384, 28);
+            cbYearLevel.TabIndex = 1;
+            toolTip.SetToolTip(cbYearLevel, "Select student's year level");
+            // 
+            // lblYearLevel
+            // 
+            lblYearLevel.AutoSize = true;
+            lblYearLevel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblYearLevel.Location = new Point(4, 75);
+            lblYearLevel.Margin = new Padding(4, 0, 4, 0);
+            lblYearLevel.Name = "lblYearLevel";
+            lblYearLevel.Size = new Size(69, 17);
+            lblYearLevel.TabIndex = 2;
+            lblYearLevel.Text = "Year Level:";
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(97, 202);
-            this.txtCourse.Name = "txtCourse";
-            this.txtCourse.Size = new System.Drawing.Size(250, 20);
-            this.txtCourse.TabIndex = 4;
-            this.txtCourse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCourse_KeyPress);
+            txtCourse.BorderStyle = BorderStyle.FixedSingle;
+            txtCourse.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCourse.Location = new Point(8, 35);
+            txtCourse.Margin = new Padding(4, 3, 4, 3);
+            txtCourse.Name = "txtCourse";
+            txtCourse.Size = new Size(385, 27);
+            txtCourse.TabIndex = 0;
+            toolTip.SetToolTip(txtCourse, "Enter student's course (e.g., Computer Science, Engineering)");
+            txtCourse.KeyPress += txtCourse_KeyPress;
             // 
-            // txtYearLevel
+            // lblCourse
             // 
-            this.txtYearLevel.Location = new System.Drawing.Point(97, 232);
-            this.txtYearLevel.Name = "txtYearLevel";
-            this.txtYearLevel.Size = new System.Drawing.Size(250, 20);
-            this.txtYearLevel.TabIndex = 5;
-            this.txtYearLevel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYearLevel_KeyPress);
+            lblCourse.AutoSize = true;
+            lblCourse.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCourse.Location = new Point(4, 12);
+            lblCourse.Margin = new Padding(4, 0, 4, 0);
+            lblCourse.Name = "lblCourse";
+            lblCourse.Size = new Size(52, 17);
+            lblCourse.TabIndex = 0;
+            lblCourse.Text = "Course:";
+            // 
+            // panelBirthday
+            // 
+            panelBirthday.Controls.Add(dtpBirthday);
+            panelBirthday.Controls.Add(lblBirthday);
+            panelBirthday.Location = new Point(16, 454);
+            panelBirthday.Margin = new Padding(4, 3, 4, 3);
+            panelBirthday.Name = "panelBirthday";
+            panelBirthday.Size = new Size(408, 78);
+            panelBirthday.TabIndex = 3;
             // 
             // dtpBirthday
             // 
-            this.dtpBirthday.CustomFormat = "yyyy/MM/dd";
-            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBirthday.Location = new System.Drawing.Point(97, 262);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(250, 20);
-            this.dtpBirthday.TabIndex = 6;
+            dtpBirthday.CalendarFont = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpBirthday.CustomFormat = "yyyy/MM/dd";
+            dtpBirthday.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpBirthday.Format = DateTimePickerFormat.Custom;
+            dtpBirthday.Location = new Point(8, 35);
+            dtpBirthday.Margin = new Padding(4, 3, 4, 3);
+            dtpBirthday.MaxDate = new DateTime(2022, 12, 31, 0, 0, 0, 0);
+            dtpBirthday.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
+            dtpBirthday.Name = "dtpBirthday";
+            dtpBirthday.Size = new Size(384, 27);
+            dtpBirthday.TabIndex = 0;
+            toolTip.SetToolTip(dtpBirthday, "Select student's date of birth");
+            dtpBirthday.Value = new DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
-            // btnSave
+            // lblBirthday
             // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnSave.Location = new System.Drawing.Point(15, 305);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(80, 30);
-            this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            lblBirthday.AutoSize = true;
+            lblBirthday.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBirthday.Location = new Point(4, 12);
+            lblBirthday.Margin = new Padding(4, 0, 4, 0);
+            lblBirthday.Name = "lblBirthday";
+            lblBirthday.Size = new Size(58, 17);
+            lblBirthday.TabIndex = 0;
+            lblBirthday.Text = "Birthday:";
             // 
-            // btnClear
+            // panelButtons
             // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnClear.Location = new System.Drawing.Point(267, 305);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(80, 30);
-            this.btnClear.TabIndex = 10;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // dgvStudents
-            // 
-            this.dgvStudents.AllowUserToAddRows = false;
-            this.dgvStudents.AllowUserToDeleteRows = false;
-            this.dgvStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(15, 391);
-            this.dgvStudents.MultiSelect = false;
-            this.dgvStudents.Name = "dgvStudents";
-            this.dgvStudents.ReadOnly = true;
-            this.dgvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudents.Size = new System.Drawing.Size(755, 200);
-            this.dgvStudents.TabIndex = 14;
-            this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnUpdate.Location = new System.Drawing.Point(101, 305);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(80, 30);
-            this.btnUpdate.TabIndex = 8;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            panelButtons.Controls.Add(btnDelete);
+            panelButtons.Controls.Add(btnUpdate);
+            panelButtons.Controls.Add(btnClear);
+            panelButtons.Controls.Add(btnSave);
+            panelButtons.Dock = DockStyle.Bottom;
+            panelButtons.Location = new Point(12, 599);
+            panelButtons.Margin = new Padding(4, 3, 4, 3);
+            panelButtons.Name = "panelButtons";
+            panelButtons.Size = new Size(443, 69);
+            panelButtons.TabIndex = 1;
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnDelete.Location = new System.Drawing.Point(187, 305);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(80, 30);
-            this.btnDelete.TabIndex = 9;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            btnDelete.BackColor = Color.FromArgb(231, 76, 60);
+            btnDelete.FlatAppearance.BorderSize = 0;
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(337, 17);
+            btnDelete.Margin = new Padding(4, 3, 4, 3);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(99, 40);
+            btnDelete.TabIndex = 3;
+            btnDelete.Text = "Delete";
+            toolTip.SetToolTip(btnDelete, "Delete the selected student record");
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
-            // btnSearch
+            // btnUpdate
             // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnSearch.Location = new System.Drawing.Point(267, 355);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(80, 23);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            btnUpdate.BackColor = Color.FromArgb(243, 156, 18);
+            btnUpdate.FlatAppearance.BorderSize = 0;
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(120, 17);
+            btnUpdate.Margin = new Padding(4, 3, 4, 3);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(99, 40);
+            btnUpdate.TabIndex = 1;
+            btnUpdate.Text = "Update";
+            toolTip.SetToolTip(btnUpdate, "Update the selected student record");
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // txtSearch
+            // btnClear
             // 
-            this.txtSearch.Location = new System.Drawing.Point(97, 356);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(164, 20);
-            this.txtSearch.TabIndex = 11;
+            btnClear.BackColor = Color.FromArgb(149, 165, 166);
+            btnClear.FlatAppearance.BorderSize = 0;
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(229, 17);
+            btnClear.Margin = new Padding(4, 3, 4, 3);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(99, 40);
+            btnClear.TabIndex = 2;
+            btnClear.Text = "Clear";
+            toolTip.SetToolTip(btnClear, "Clear all input fields");
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
+            // 
+            // btnSave
+            // 
+            btnSave.BackColor = Color.FromArgb(46, 204, 113);
+            btnSave.FlatAppearance.BorderSize = 0;
+            btnSave.FlatStyle = FlatStyle.Flat;
+            btnSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(12, 17);
+            btnSave.Margin = new Padding(4, 3, 4, 3);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(99, 40);
+            btnSave.TabIndex = 0;
+            btnSave.Text = "Save";
+            toolTip.SetToolTip(btnSave, "Save new student record");
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
+            // 
+            // panelRight
+            // 
+            panelRight.Controls.Add(panelSearch);
+            panelRight.Controls.Add(dgvStudents);
+            panelRight.Controls.Add(statusStrip);
+            panelRight.Dock = DockStyle.Fill;
+            panelRight.Location = new Point(467, 69);
+            panelRight.Margin = new Padding(4, 3, 4, 3);
+            panelRight.Name = "panelRight";
+            panelRight.Padding = new Padding(12, 12, 12, 12);
+            panelRight.Size = new Size(728, 680);
+            panelRight.TabIndex = 2;
+            // 
+            // panelSearch
+            // 
+            panelSearch.Controls.Add(btnClearSearch);
+            panelSearch.Controls.Add(lblSearch);
+            panelSearch.Controls.Add(txtSearch);
+            panelSearch.Controls.Add(btnSearch);
+            panelSearch.Dock = DockStyle.Top;
+            panelSearch.Location = new Point(12, 12);
+            panelSearch.Margin = new Padding(4, 3, 4, 3);
+            panelSearch.Name = "panelSearch";
+            panelSearch.Size = new Size(704, 58);
+            panelSearch.TabIndex = 0;
+            // 
+            // btnClearSearch
+            // 
+            btnClearSearch.BackColor = Color.FromArgb(149, 165, 166);
+            btnClearSearch.FlatAppearance.BorderSize = 0;
+            btnClearSearch.FlatStyle = FlatStyle.Flat;
+            btnClearSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnClearSearch.ForeColor = Color.White;
+            btnClearSearch.Location = new Point(610, 10);
+            btnClearSearch.Margin = new Padding(4, 3, 4, 3);
+            btnClearSearch.Name = "btnClearSearch";
+            btnClearSearch.Size = new Size(88, 37);
+            btnClearSearch.TabIndex = 2;
+            btnClearSearch.Text = "Clear";
+            toolTip.SetToolTip(btnClearSearch, "Clear search results and show all records");
+            btnClearSearch.UseVisualStyleBackColor = false;
+            btnClearSearch.Click += btnClearSearch_Click;
             // 
             // lblSearch
             // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(12, 359);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(76, 13);
-            this.lblSearch.TabIndex = 17;
-            this.lblSearch.Text = "Search by ID:";
+            lblSearch.AutoSize = true;
+            lblSearch.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSearch.Location = new Point(4, 18);
+            lblSearch.Margin = new Padding(4, 0, 4, 0);
+            lblSearch.Name = "lblSearch";
+            lblSearch.Size = new Size(84, 17);
+            lblSearch.TabIndex = 0;
+            lblSearch.Text = "Search by ID:";
+            // 
+            // txtSearch
+            // 
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
+            txtSearch.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearch.Location = new Point(117, 13);
+            txtSearch.Margin = new Padding(4, 3, 4, 3);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(389, 27);
+            txtSearch.TabIndex = 0;
+            toolTip.SetToolTip(txtSearch, "Enter ID to search for a specific student");
+            txtSearch.KeyPress += txtSearch_KeyPress;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.FromArgb(52, 152, 219);
+            btnSearch.FlatAppearance.BorderSize = 0;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(516, 10);
+            btnSearch.Margin = new Padding(4, 3, 4, 3);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(88, 37);
+            btnSearch.TabIndex = 1;
+            btnSearch.Text = "Search";
+            toolTip.SetToolTip(btnSearch, "Search for student by ID");
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // dgvStudents
+            // 
+            dgvStudents.AllowUserToAddRows = false;
+            dgvStudents.AllowUserToDeleteRows = false;
+            dgvStudents.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvStudents.BackgroundColor = Color.White;
+            dgvStudents.BorderStyle = BorderStyle.None;
+            dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvStudents.Location = new Point(12, 76);
+            dgvStudents.Margin = new Padding(4, 3, 4, 3);
+            dgvStudents.MultiSelect = false;
+            dgvStudents.Name = "dgvStudents";
+            dgvStudents.ReadOnly = true;
+            dgvStudents.RowHeadersVisible = false;
+            dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvStudents.Size = new Size(705, 566);
+            dgvStudents.TabIndex = 1;
+            toolTip.SetToolTip(dgvStudents, "List of student records");
+            dgvStudents.CellClick += dgvStudents_CellClick;
+            // 
+            // statusStrip
+            // 
+            statusStrip.Items.AddRange(new ToolStripItem[] { statusLabel });
+            statusStrip.Location = new Point(12, 646);
+            statusStrip.Name = "statusStrip";
+            statusStrip.Padding = new Padding(1, 0, 16, 0);
+            statusStrip.Size = new Size(704, 22);
+            statusStrip.TabIndex = 2;
+            statusStrip.Text = "statusStrip1";
+            // 
+            // statusLabel
+            // 
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(74, 17);
+            statusLabel.Text = "Ready to use";
             // 
             // StudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ClientSize = new System.Drawing.Size(784, 611);
-            this.Controls.Add(this.lblSearch);
-            this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.dgvStudents);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.dtpBirthday);
-            this.Controls.Add(this.txtYearLevel);
-            this.Controls.Add(this.txtCourse);
-            this.Controls.Add(this.txtMiddleName);
-            this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.txtFirstName);
-            this.Controls.Add(this.txtIDNumber);
-            this.Controls.Add(this.lblBirthday);
-            this.Controls.Add(this.lblYearLevel);
-            this.Controls.Add(this.lblCourse);
-            this.Controls.Add(this.lblMiddleName);
-            this.Controls.Add(this.lblLastName);
-            this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.lblIDNumber);
-            this.Controls.Add(this.lblTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "StudentForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Student Information";
-            this.Load += new System.EventHandler(this.StudentForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1195, 749);
+            Controls.Add(panelRight);
+            Controls.Add(panelLeft);
+            Controls.Add(panelHeader);
+            Margin = new Padding(4, 3, 4, 3);
+            MinimumSize = new Size(1211, 718);
+            Name = "StudentForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Student Records System";
+            Load += StudentForm_Load;
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
+            panelLeft.ResumeLayout(false);
+            groupBoxStudentInfo.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
+            panelIDNumber.ResumeLayout(false);
+            panelIDNumber.PerformLayout();
+            panelName.ResumeLayout(false);
+            panelName.PerformLayout();
+            panelAcademic.ResumeLayout(false);
+            panelAcademic.PerformLayout();
+            panelBirthday.ResumeLayout(false);
+            panelBirthday.PerformLayout();
+            panelButtons.ResumeLayout(false);
+            panelRight.ResumeLayout(false);
+            panelRight.PerformLayout();
+            panelSearch.ResumeLayout(false);
+            panelSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvStudents).EndInit();
+            statusStrip.ResumeLayout(false);
+            statusStrip.PerformLayout();
+            ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblIDNumber;
-        private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.Label lblLastName;
-        private System.Windows.Forms.Label lblMiddleName;
-        private System.Windows.Forms.Label lblCourse;
-        private System.Windows.Forms.Label lblYearLevel;
-        private System.Windows.Forms.Label lblBirthday;
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.GroupBox groupBoxStudentInfo;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panelIDNumber;
         private System.Windows.Forms.TextBox txtIDNumber;
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label lblIDNumber;
+        private System.Windows.Forms.Panel panelName;
         private System.Windows.Forms.TextBox txtMiddleName;
+        private System.Windows.Forms.Label lblMiddleName;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Panel panelAcademic;
+        private System.Windows.Forms.Label lblYearLevel;
         private System.Windows.Forms.TextBox txtCourse;
-        private System.Windows.Forms.TextBox txtYearLevel;
+        private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Panel panelBirthday;
         private System.Windows.Forms.DateTimePicker dtpBirthday;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.DataGridView dgvStudents;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblBirthday;
+        private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Panel panelRight;
+        private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.Button btnClearSearch;
         private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.DataGridView dgvStudents;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
+        private System.Windows.Forms.ComboBox cbYearLevel;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
