@@ -84,7 +84,7 @@ namespace SemiFinalActivity2
             // 
             // panelHeader
             // 
-            panelHeader.BackColor = Color.FromArgb(41, 128, 185);
+            panelHeader.BackColor = Color.FromArgb(40, 42, 54);
             panelHeader.Controls.Add(lblTitle);
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(0, 0);
@@ -97,7 +97,7 @@ namespace SemiFinalActivity2
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.ForeColor = Color.White;
+            lblTitle.ForeColor = Color.FromArgb(80, 250, 123);
             lblTitle.Location = new Point(14, 15);
             lblTitle.Margin = new Padding(4, 0, 4, 0);
             lblTitle.Name = "lblTitle";
@@ -107,14 +107,14 @@ namespace SemiFinalActivity2
             // 
             // panelLeft
             // 
-            panelLeft.BackColor = Color.FromArgb(236, 240, 241);
+            panelLeft.BackColor = Color.FromArgb(68, 71, 90);
             panelLeft.Controls.Add(groupBoxStudentInfo);
             panelLeft.Controls.Add(panelButtons);
             panelLeft.Dock = DockStyle.Left;
             panelLeft.Location = new Point(0, 69);
             panelLeft.Margin = new Padding(4, 3, 4, 3);
             panelLeft.Name = "panelLeft";
-            panelLeft.Padding = new Padding(12, 12, 12, 12);
+            panelLeft.Padding = new Padding(12);
             panelLeft.Size = new Size(467, 680);
             panelLeft.TabIndex = 1;
             // 
@@ -123,6 +123,7 @@ namespace SemiFinalActivity2
             groupBoxStudentInfo.Controls.Add(flowLayoutPanel1);
             groupBoxStudentInfo.Dock = DockStyle.Fill;
             groupBoxStudentInfo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            groupBoxStudentInfo.ForeColor = Color.FromArgb(139, 233, 253);
             groupBoxStudentInfo.Location = new Point(12, 12);
             groupBoxStudentInfo.Margin = new Padding(4, 3, 4, 3);
             groupBoxStudentInfo.Name = "groupBoxStudentInfo";
@@ -143,7 +144,7 @@ namespace SemiFinalActivity2
             flowLayoutPanel1.Location = new Point(4, 21);
             flowLayoutPanel1.Margin = new Padding(4, 3, 4, 3);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Padding = new Padding(12, 12, 12, 12);
+            flowLayoutPanel1.Padding = new Padding(12);
             flowLayoutPanel1.Size = new Size(435, 563);
             flowLayoutPanel1.TabIndex = 0;
             // 
@@ -159,6 +160,7 @@ namespace SemiFinalActivity2
             // 
             // txtIDNumber
             // 
+            txtIDNumber.BackColor = Color.FromArgb(248, 248, 242);
             txtIDNumber.BorderStyle = BorderStyle.FixedSingle;
             txtIDNumber.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtIDNumber.Location = new Point(8, 35);
@@ -173,6 +175,7 @@ namespace SemiFinalActivity2
             // 
             lblIDNumber.AutoSize = true;
             lblIDNumber.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIDNumber.ForeColor = Color.FromArgb(248, 248, 242);
             lblIDNumber.Location = new Point(4, 12);
             lblIDNumber.Margin = new Padding(4, 0, 4, 0);
             lblIDNumber.Name = "lblIDNumber";
@@ -196,6 +199,7 @@ namespace SemiFinalActivity2
             // 
             // txtMiddleName
             // 
+            txtMiddleName.BackColor = Color.FromArgb(248, 248, 242);
             txtMiddleName.BorderStyle = BorderStyle.FixedSingle;
             txtMiddleName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtMiddleName.Location = new Point(8, 162);
@@ -209,6 +213,7 @@ namespace SemiFinalActivity2
             // 
             lblMiddleName.AutoSize = true;
             lblMiddleName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMiddleName.ForeColor = Color.FromArgb(248, 248, 242);
             lblMiddleName.Location = new Point(4, 138);
             lblMiddleName.Margin = new Padding(4, 0, 4, 0);
             lblMiddleName.Name = "lblMiddleName";
@@ -218,6 +223,7 @@ namespace SemiFinalActivity2
             // 
             // txtLastName
             // 
+            txtLastName.BackColor = Color.FromArgb(248, 248, 242);
             txtLastName.BorderStyle = BorderStyle.FixedSingle;
             txtLastName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLastName.Location = new Point(8, 98);
@@ -231,6 +237,7 @@ namespace SemiFinalActivity2
             // 
             lblLastName.AutoSize = true;
             lblLastName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLastName.ForeColor = Color.FromArgb(248, 248, 242);
             lblLastName.Location = new Point(4, 75);
             lblLastName.Margin = new Padding(4, 0, 4, 0);
             lblLastName.Name = "lblLastName";
@@ -240,6 +247,7 @@ namespace SemiFinalActivity2
             // 
             // txtFirstName
             // 
+            txtFirstName.BackColor = Color.FromArgb(248, 248, 242);
             txtFirstName.BorderStyle = BorderStyle.FixedSingle;
             txtFirstName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFirstName.Location = new Point(8, 35);
@@ -253,6 +261,7 @@ namespace SemiFinalActivity2
             // 
             lblFirstName.AutoSize = true;
             lblFirstName.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFirstName.ForeColor = Color.FromArgb(248, 248, 242);
             lblFirstName.Location = new Point(4, 12);
             lblFirstName.Margin = new Padding(4, 0, 4, 0);
             lblFirstName.Name = "lblFirstName";
@@ -274,6 +283,7 @@ namespace SemiFinalActivity2
             // 
             // cbYearLevel
             // 
+            cbYearLevel.BackColor = Color.FromArgb(248, 248, 242);
             cbYearLevel.DropDownStyle = ComboBoxStyle.DropDownList;
             cbYearLevel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbYearLevel.FormattingEnabled = true;
@@ -289,6 +299,7 @@ namespace SemiFinalActivity2
             // 
             lblYearLevel.AutoSize = true;
             lblYearLevel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblYearLevel.ForeColor = Color.FromArgb(248, 248, 242);
             lblYearLevel.Location = new Point(4, 75);
             lblYearLevel.Margin = new Padding(4, 0, 4, 0);
             lblYearLevel.Name = "lblYearLevel";
@@ -298,6 +309,7 @@ namespace SemiFinalActivity2
             // 
             // txtCourse
             // 
+            txtCourse.BackColor = Color.FromArgb(248, 248, 242);
             txtCourse.BorderStyle = BorderStyle.FixedSingle;
             txtCourse.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCourse.Location = new Point(8, 35);
@@ -312,6 +324,7 @@ namespace SemiFinalActivity2
             // 
             lblCourse.AutoSize = true;
             lblCourse.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCourse.ForeColor = Color.FromArgb(248, 248, 242);
             lblCourse.Location = new Point(4, 12);
             lblCourse.Margin = new Padding(4, 0, 4, 0);
             lblCourse.Name = "lblCourse";
@@ -332,6 +345,10 @@ namespace SemiFinalActivity2
             // dtpBirthday
             // 
             dtpBirthday.CalendarFont = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpBirthday.CalendarForeColor = Color.FromArgb(40, 42, 54);
+            dtpBirthday.CalendarMonthBackground = Color.FromArgb(248, 248, 242);
+            dtpBirthday.CalendarTitleBackColor = Color.FromArgb(40, 42, 54);
+            dtpBirthday.CalendarTitleForeColor = Color.FromArgb(248, 248, 242);
             dtpBirthday.CustomFormat = "yyyy/MM/dd";
             dtpBirthday.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpBirthday.Format = DateTimePickerFormat.Custom;
@@ -349,6 +366,7 @@ namespace SemiFinalActivity2
             // 
             lblBirthday.AutoSize = true;
             lblBirthday.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBirthday.ForeColor = Color.FromArgb(248, 248, 242);
             lblBirthday.Location = new Point(4, 12);
             lblBirthday.Margin = new Padding(4, 0, 4, 0);
             lblBirthday.Name = "lblBirthday";
@@ -371,7 +389,7 @@ namespace SemiFinalActivity2
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.FromArgb(231, 76, 60);
+            btnDelete.BackColor = Color.FromArgb(255, 85, 85);
             btnDelete.FlatAppearance.BorderSize = 0;
             btnDelete.FlatStyle = FlatStyle.Flat;
             btnDelete.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -388,11 +406,11 @@ namespace SemiFinalActivity2
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = Color.FromArgb(243, 156, 18);
+            btnUpdate.BackColor = Color.FromArgb(255, 184, 108);
             btnUpdate.FlatAppearance.BorderSize = 0;
             btnUpdate.FlatStyle = FlatStyle.Flat;
             btnUpdate.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUpdate.ForeColor = Color.White;
+            btnUpdate.ForeColor = Color.FromArgb(40, 42, 54);
             btnUpdate.Location = new Point(120, 17);
             btnUpdate.Margin = new Padding(4, 3, 4, 3);
             btnUpdate.Name = "btnUpdate";
@@ -405,11 +423,11 @@ namespace SemiFinalActivity2
             // 
             // btnClear
             // 
-            btnClear.BackColor = Color.FromArgb(149, 165, 166);
+            btnClear.BackColor = Color.FromArgb(189, 147, 249);
             btnClear.FlatAppearance.BorderSize = 0;
             btnClear.FlatStyle = FlatStyle.Flat;
             btnClear.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnClear.ForeColor = Color.White;
+            btnClear.ForeColor = Color.FromArgb(40, 42, 54);
             btnClear.Location = new Point(229, 17);
             btnClear.Margin = new Padding(4, 3, 4, 3);
             btnClear.Name = "btnClear";
@@ -422,11 +440,11 @@ namespace SemiFinalActivity2
             // 
             // btnSave
             // 
-            btnSave.BackColor = Color.FromArgb(46, 204, 113);
+            btnSave.BackColor = Color.FromArgb(80, 250, 123);
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.FlatStyle = FlatStyle.Flat;
             btnSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.ForeColor = Color.White;
+            btnSave.ForeColor = Color.FromArgb(40, 42, 54);
             btnSave.Location = new Point(12, 17);
             btnSave.Margin = new Padding(4, 3, 4, 3);
             btnSave.Name = "btnSave";
@@ -439,6 +457,7 @@ namespace SemiFinalActivity2
             // 
             // panelRight
             // 
+            panelRight.BackColor = Color.FromArgb(40, 42, 54);
             panelRight.Controls.Add(panelSearch);
             panelRight.Controls.Add(dgvStudents);
             panelRight.Controls.Add(statusStrip);
@@ -446,12 +465,13 @@ namespace SemiFinalActivity2
             panelRight.Location = new Point(467, 69);
             panelRight.Margin = new Padding(4, 3, 4, 3);
             panelRight.Name = "panelRight";
-            panelRight.Padding = new Padding(12, 12, 12, 12);
+            panelRight.Padding = new Padding(12);
             panelRight.Size = new Size(728, 680);
             panelRight.TabIndex = 2;
             // 
             // panelSearch
             // 
+            panelSearch.BackColor = Color.FromArgb(68, 71, 90);
             panelSearch.Controls.Add(btnClearSearch);
             panelSearch.Controls.Add(lblSearch);
             panelSearch.Controls.Add(txtSearch);
@@ -465,11 +485,11 @@ namespace SemiFinalActivity2
             // 
             // btnClearSearch
             // 
-            btnClearSearch.BackColor = Color.FromArgb(149, 165, 166);
+            btnClearSearch.BackColor = Color.FromArgb(189, 147, 249);
             btnClearSearch.FlatAppearance.BorderSize = 0;
             btnClearSearch.FlatStyle = FlatStyle.Flat;
             btnClearSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnClearSearch.ForeColor = Color.White;
+            btnClearSearch.ForeColor = Color.FromArgb(40, 42, 54);
             btnClearSearch.Location = new Point(610, 10);
             btnClearSearch.Margin = new Padding(4, 3, 4, 3);
             btnClearSearch.Name = "btnClearSearch";
@@ -484,6 +504,7 @@ namespace SemiFinalActivity2
             // 
             lblSearch.AutoSize = true;
             lblSearch.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSearch.ForeColor = Color.FromArgb(248, 248, 242);
             lblSearch.Location = new Point(4, 18);
             lblSearch.Margin = new Padding(4, 0, 4, 0);
             lblSearch.Name = "lblSearch";
@@ -493,6 +514,7 @@ namespace SemiFinalActivity2
             // 
             // txtSearch
             // 
+            txtSearch.BackColor = Color.FromArgb(248, 248, 242);
             txtSearch.BorderStyle = BorderStyle.FixedSingle;
             txtSearch.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSearch.Location = new Point(117, 13);
@@ -505,11 +527,11 @@ namespace SemiFinalActivity2
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.FromArgb(52, 152, 219);
+            btnSearch.BackColor = Color.FromArgb(139, 233, 253);
             btnSearch.FlatAppearance.BorderSize = 0;
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSearch.ForeColor = Color.White;
+            btnSearch.ForeColor = Color.FromArgb(40, 42, 54);
             btnSearch.Location = new Point(516, 10);
             btnSearch.Margin = new Padding(4, 3, 4, 3);
             btnSearch.Name = "btnSearch";
@@ -526,7 +548,7 @@ namespace SemiFinalActivity2
             dgvStudents.AllowUserToDeleteRows = false;
             dgvStudents.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvStudents.BackgroundColor = Color.White;
+            dgvStudents.BackgroundColor = Color.FromArgb(68, 71, 90);
             dgvStudents.BorderStyle = BorderStyle.None;
             dgvStudents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvStudents.Location = new Point(12, 76);
@@ -543,6 +565,7 @@ namespace SemiFinalActivity2
             // 
             // statusStrip
             // 
+            statusStrip.BackColor = Color.FromArgb(40, 42, 54);
             statusStrip.Items.AddRange(new ToolStripItem[] { statusLabel });
             statusStrip.Location = new Point(12, 646);
             statusStrip.Name = "statusStrip";
@@ -553,6 +576,7 @@ namespace SemiFinalActivity2
             // 
             // statusLabel
             // 
+            statusLabel.ForeColor = Color.FromArgb(248, 248, 242);
             statusLabel.Name = "statusLabel";
             statusLabel.Size = new Size(74, 17);
             statusLabel.Text = "Ready to use";
@@ -561,7 +585,7 @@ namespace SemiFinalActivity2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.FromArgb(40, 42, 54);
             ClientSize = new Size(1195, 749);
             Controls.Add(panelRight);
             Controls.Add(panelLeft);
