@@ -44,6 +44,33 @@ namespace SemiFinalActivity2
 
             // Update status
             UpdateStatus($"Total Records: {dtStudents.Rows.Count}");
+
+            // Apply custom styling to DataGridView
+            CustomizeDataGridView();
+        }
+
+        private void CustomizeDataGridView()
+        {
+            // Set custom colors for DataGridView
+            dgvStudents.EnableHeadersVisualStyles = false;
+            dgvStudents.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(40, 42, 54);
+            dgvStudents.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(139, 233, 253);
+            dgvStudents.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dgvStudents.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvStudents.ColumnHeadersHeight = 35;
+
+            // Set alternating row colors
+            dgvStudents.RowsDefaultCellStyle.BackColor = Color.FromArgb(68, 71, 90);
+            dgvStudents.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(58, 61, 80);
+            dgvStudents.DefaultCellStyle.ForeColor = Color.FromArgb(248, 248, 242);
+            dgvStudents.DefaultCellStyle.SelectionBackColor = Color.FromArgb(80, 250, 123);
+            dgvStudents.DefaultCellStyle.SelectionForeColor = Color.FromArgb(40, 42, 54);
+            dgvStudents.DefaultCellStyle.Font = new Font("Segoe UI", 9.75F);
+
+            // Set border style
+            dgvStudents.BorderStyle = BorderStyle.None;
+            dgvStudents.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvStudents.GridColor = Color.FromArgb(98, 101, 120);
         }
 
         private void InitializeDataTable()
